@@ -1,3 +1,5 @@
+import '@/app/styles/globals.scss'
+
 export const metadata = {
   title: "Movie Rater",
   description: "An app to rate and remember movies you've already watched.",
