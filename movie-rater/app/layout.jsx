@@ -1,3 +1,4 @@
+import Header from './components/ui/header';
 import '@/app/styles/globals.scss'
 
 export const metadata = {
@@ -9,6 +10,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+        <nav className='flex justify-center max-w-full h-16 border-b border-color-[#9D9393]'>{<Header />}</nav>
         {children}
       </body>
     </html>
