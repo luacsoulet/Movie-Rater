@@ -1,0 +1,124 @@
+{
+    "films": [
+      {
+        "id": 1,
+        "title": "Inception",
+        "year": 2010,
+        "director": "Christopher Nolan",
+        "actors": ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Elliot Page", "Tom Hardy"],
+        "genre": ["Science Fiction","Thriller","Action"],
+        "duration": 148,
+        "poster": "/images/inception-poster.webp",
+        "rating": 5,
+        "resume": "It's a sci-fi thriller that explores the realm of shared dream worlds. The film follows Dom Cobb, a skilled thief who steals secrets from within the subconscious during the dream state. He's given a chance to have his criminal record erased in exchange for implanting an idea into the mind of a CEO. The complex plot involves multiple layers of dreams, with Cobb and his team navigating these intricate dreamscapes."
+      },
+      {
+        "id": 2,
+        "title": "The Shawshank Redemption",
+        "year": 1994,
+        "director": "Frank Darabont",
+        "actors": ["Tim Robbins", "Morgan Freeman", "Bob Gunton", "William Sadler"],
+        "genre": ["Drama","Crime"],
+        "duration": 142,
+        "poster": "/images/the-shawshank-redemption.webp",
+        "rating": 3,
+        "resume": "It's a drama that tells the story of Andy Dufresne, a banker who is sentenced to life in Shawshank State Penitentiary for the murder of his wife and her lover, despite his claims of innocence. Over the years, he befriends fellow inmate Ellis 'Red' Redding and earns the respect of the prison warden and guards by using his financial expertise to help them. The film highlights themes of hope, friendship, and resilience."
+      },
+      {
+        "id": 3,
+        "title": "The Godfather",
+        "year": 1972,
+        "director": "Francis Ford Coppola",
+        "actors": ["Marlon Brando", "Al Pacino", "James Caan", "Diane Keaton"],
+        "genre": ["Drama","Crime"],
+        "duration": 175,
+        "poster": "/images/the-godfather.webp",
+        "rating": 5,
+        "resume": "It's a crime saga that chronicles the rise and fall of the Corleone family. The story centers around Vito Corleone, the aging patriarch of an organized crime dynasty, who transfers control of his clandestine empire to his reluctant son, Michael. The film explores themes of power, loyalty, and betrayal as Michael becomes increasingly involved in the family's criminal activities."
+      },
+      {
+        "id": 4,
+        "title": "The Dark Knight",
+        "year": 2008,
+        "director": "Christopher Nolan",
+        "actors": ["Christian Bale", "Heath Ledger", "Aaron Eckhart", "Michael Caine"],
+        "genre": ["Action","Crime","Drama"],
+        "duration": 152,
+        "poster": "/images/the-dark-night.webp",
+        "rating": 5,
+        "resume": "It's a superhero thriller that pits Batman against his arch-nemesis, the Joker. The film follows Bruce Wayne as he struggles to maintain order in Gotham City while facing the moral dilemmas posed by the Joker's chaotic schemes. The story delves into themes of justice, heroism, and the fine line between good and evil."
+      },
+      {
+        "id": 5,
+        "title": "Pulp Fiction",
+        "year": 1994,
+        "director": "Quentin Tarantino",
+        "actors": ["John Travolta", "Uma Thurman", "Samuel L. Jackson", "Bruce Willis"],
+        "genre": ["Crime","Drama","Thriller"],
+        "duration": 154,
+        "poster": "/images/pulp-fiction.webp",
+        "rating": 5,
+        "resume": "It's a crime drama that intertwines multiple storylines involving the Los Angeles criminal underworld. The film features three main narratives: Vincent Vega and Jules Winnfield, two hitmen with philosophical discussions; the story of their boss, Marsellus Wallace, and his wife, Mia; and the tale of a boxer named Butch Coolidge."
+      },
+      {
+        "id": 6,
+        "title": "Forrest Gump",
+        "year": 1994,
+        "director": "Robert Zemeckis",
+        "actors": ["Tom Hanks", "Robin Wright", "Gary Sinise", "Sally Field"],
+        "genre": ["Drama","Comedy","Romance"],
+        "duration": 142,
+        "poster": "/images/forrest-gump.webp",
+        "rating": 4,
+        "resume": "It's a drama-comedy that traces the life of Forrest Gump, a man with a low IQ who inadvertently influences several historical events in the 20th century United States. Despite his limitations, Forrest lives an extraordinary life, experiencing the Vietnam War, meeting Presidents, and starting a successful shrimp business. The film highlights themes of destiny, love, and the impact of history on individual lives."
+      },
+      {
+        "id": 7,
+        "title": "Fight Club",
+        "year": 1999,
+        "director": "David Fincher",
+        "actors": ["Brad Pitt", "Edward Norton", "Helena Bonham Carter", "Meat Loaf"],
+        "genre": ["Drama","Thriller"],
+        "duration": 139,
+        "poster": "/images/fight-club.webp",
+        "rating": 4,
+        "resume": "It's a psychological drama that explores the themes of identity and consumerism. The film follows an unnamed narrator who forms an underground fight club with the enigmatic Tyler Durden. As the fight club grows, it evolves into a larger anarchistic movement. The story delves into the narrator's struggle with his own identity and the dark side of human nature."
+      },
+      {
+        "id": 8,
+        "title": "The Matrix",
+        "year": 1999,
+        "director": "Lana Wachowski, Lilly Wachowski",
+        "actors": ["Keanu Reeves", "Laurence Fishburne", "Carrie-Anne Moss", "Hugo Weaving"],
+        "genre": ["Science Fiction","Action","Thriller"],
+        "duration": 136,
+        "poster": "/images/the-matrix.webp",
+        "rating": 4,
+        "resume": "It's a sci-fi action film that questions the nature of reality. The story follows Neo, a computer hacker who discovers that the world he lives in is a simulated reality created by intelligent machines. With the help of a group of rebels led by Morpheus, Neo fights to break free from the illusion and save humanity. The film explores themes of freedom, destiny, and the nature of reality."
+      },
+      {
+        "id": 9,
+        "title": "The Lord of the Rings: The Fellowship of the Ring",
+        "year": 2001,
+        "director": "Peter Jackson",
+        "actors": ["Elijah Wood", "Ian McKellen", "Orlando Bloom", "Sean Bean"],
+        "genre": ["Fantasy","Adventure","Action"],
+        "duration": 178,
+        "poster": "/images/lord-of-the-rings.webp",
+        "rating": 3,
+        "resume": "It's a fantasy epic that begins the quest to destroy the One Ring. The film follows Frodo Baggins, a young hobbit who is entrusted with the task of destroying the powerful ring to prevent the dark lord Sauron from conquering Middle-earth. Accompanied by a fellowship of allies, Frodo embarks on a perilous journey filled with danger and adventure."
+      },
+      {
+        "id": 10,
+        "title": "Star Wars: Episode IV - A New Hope",
+        "year": 1977,
+        "director": "George Lucas",
+        "actors": ["Mark Hamill", "Harrison Ford", "Carrie Fisher", "Alec Guinness"],
+        "genre": ["Science Fiction","Adventure","Fantasy"],
+        "duration": 121,
+        "poster": "/images/star-wars-a-new-hope.webp",
+        "rating": 3,
+        "resume": "It's a space opera that introduces the battle between the Rebel Alliance and the Galactic Empire. The film follows Luke Skywalker, a young farm boy who discovers his destiny as a Jedi Knight. With the help of allies like Princess Leia, Han Solo, and Obi-Wan Kenobi, Luke joins the fight against the evil Darth Vader and the Empire. The story explores themes of heroism, destiny, and the struggle between good and evil."
+      }
+    ]
+  }
