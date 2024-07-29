@@ -3,16 +3,31 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faBookmark } from "@fortawesome/free-solid-svg-icons";
 import popcornImage from '@/public/images/popcorn-rating.svg'
 
-function Card({title, year, averageRating, poster}){
+function Card({id ,title, year, averageRating, poster, onMovieSelect}){
+
+    // Valeur de averageRating stocker dans currRating pour faciliter le décompte lors de l'affichage de la note.
+    let currRating = averageRating;
     
+    // Callback function qui envoie en tant que props au composant parent pour avoir l'id du film sélectionner.
+    const MovieSelectId =() => {
+        onMovieSelect(id)
+    }
+
+    // Fonction générant les icônes suivant la note du film sur 5
     const renderPopcornIcons = (number) => {
+        
+        // initialisation d'un array qui prendra les icônes en stockage
         const icons = [];
+
         for (let i = 0; i < number; i++) {
-            averageRating -= 1;
+
+            currRating -= 1;
+            // Push dans l'array icons de l'élément de note
             icons.push(
                 <div key={i} style={{ marginLeft: i === 0 ? '0' : '-5px' }}>
                     <Image
-                        className={averageRating < 0 ? "grayscale" :""}
+                        // si le currRating est inférieur à zéro alors le filtre greysclae de tailwind s'applique sur l'image.
+                        className={currRating < 0 ? "grayscale" :""}
                         src={popcornImage}
                         alt="popcorn rate indicator"
                         label="Image"
@@ -45,7 +60,7 @@ function Card({title, year, averageRating, poster}){
                             {renderPopcornIcons(5)}
                         </div>
                     </div>
-                    <button className="flex justify-center items-center w-8 h-8 text-xl rounded-3xl bg-[#131313] bg-opacity-50 backdrop-blur-sm"><FontAwesomeIcon icon={faPlus} /></button>
+                    <button className="flex justify-center items-center w-8 h-8 text-xl rounded-3xl bg-[#131313] bg-opacity-50 backdrop-blur-sm" onClick={MovieSelectId}><FontAwesomeIcon icon={faPlus} /></button>
                 </div>
             </div>
         </div>
