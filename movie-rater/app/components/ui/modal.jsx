@@ -38,7 +38,7 @@ function InfoModal({data, setIsModalOpen}){
     }
 
     return(
-        <div>
+        <div className='flex'>
             <Image 
                 src={data.poster}
                 width={300}

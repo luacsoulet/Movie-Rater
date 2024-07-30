@@ -86,6 +86,8 @@ function Home() {
         <Modal
           isOpen={isModalOpen}
           onRequestClose={handleCloseModal}
+          className="mt-[140px] p-4 shadow-lg mx-auto my-8 w-full max-w-[1240px] rounded-lg bg-[#131313] bg-opacity-80 backdrop-blur-sm text-white" // Ajoutez vos classes Tailwind ici
+          overlayClassName="fixed inset-0 bg-black bg-opacity-20"
         >
           {/* Props setIsModalOpen vas servir à savoir si la modal est ouverte ou pas depuis le composant InfoModal*/}
           <InfoModal data={isMovieData} setIsModalOpen={setIsModalOpen}/>
