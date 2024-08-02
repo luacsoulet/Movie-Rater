@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
       <body>
         <nav className='flex justify-center max-w-full h-16 border-b border-color-[#9D9393]'>{<Header />}</nav>
         {children}
-        <footer className='flex justify-center fixed bottom-0 left-0 z-20 max-w-full'>{<Footer />}</footer>
+        <footer className='flex justify-center z-20 fixed bottom-0 w-full'>{<Footer />}</footer>
       </body>
     </html>
   );
