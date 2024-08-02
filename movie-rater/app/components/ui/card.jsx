@@ -41,9 +41,9 @@ function Card({id ,title, year, averageRating, poster, onMovieSelect}){
     }
 
     return(
-        <div className="h-[275px] w-[200px] relative content-end">
+        <div className="h-[350px] w-[250px] relative content-end">
             <Image
-                className="rounded-lg object-cover"
+                className="rounded-lg"
                 src={poster}
                 alt={`${title}-image`}
                 label="Image"
