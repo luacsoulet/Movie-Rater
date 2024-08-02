@@ -46,9 +46,9 @@ function Home() {
   
   return (
     <main className="flex flex-col justify-center items-center text-white gap-10" id='app'>
-      <section className="flex flex-col mt-10 gap-5">
+      <section className="flex flex-col mt-10 gap-5 w-full max-w-custom">
         <h1 className="text-center text-xl font-medium">Latest Movies Added:</h1>
-        <div className="flex gap-10">
+        <div className="flex justify-center gap-10">
           {/* Génération des Card pour les films les plus récents */}
           {recentMovies.map((el) => (
             <Card 
@@ -63,9 +63,9 @@ function Home() {
           ))}
         </div>
       </section>
-      <section className="flex flex-col gap-5">
+      <section className="flex flex-col gap-5 w-full max-w-custom mb-[250px]">
         <h1 className="text-center text-xl font-medium">Best ratings:</h1>
-        <div className="flex gap-10">
+        <div className="flex gap-10 justify-center">
         {/* Génération des Card pour les films les mieux notés */}
         {bestRating.map((el) => (
             <Card 
