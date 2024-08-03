@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import popcornImage from '@/public/images/popcorn-rating.svg'
 
 // Props data pour les donnés du film et setIsModalOpen pour savoir si la modal est ouverte depuis le composant
@@ -28,8 +30,8 @@ function InfoModal({data, setIsModalOpen}){
                         src={popcornImage}
                         alt="popcorn rate indicator"
                         label="Image"
-                        width={30}
-                        height={30}
+                        width={60}
+                        height={60}
                     />
                 </div>
             );
@@ -38,37 +40,39 @@ function InfoModal({data, setIsModalOpen}){
     }
 
     return(
-        <div className='flex'>
-            <Image 
-                src={data.poster}
-                width={300}
-                height={450}
-                alt={data.title}
-            />
-            <div>
-                <h1>{data.title}</h1>
+        <div className='flex items-center gap-8 min-h-[600px] h-fit'>
+            <div className='relative w-[333px] h-[500px]'>
+                <Image
+                    className='rounded-xl object-cover'
+                    src={data.poster}
+                    alt={data.title}
+                    fill
+                />
+            </div>
+            <div className='flex flex-col gap-[8px] w-[720px] text-2xl'>
+                <h1 className='text-3xl'>{data.title}</h1>
                 <p>{data.duration} min</p>
                 <p>{data.year}</p>
-                <div>
-                    {data.genre.map(el => {
-                        <p>{el}</p>
-                    })}
+                <div className='flex gap-[8px]'>
+                    {data.genre.map(el => (
+                        <p className='px-[10px] py-[3px] rounded-2xl bg-red-800 bg-opacity-70 text-xl'>{el}</p>
+                    ))}
                 </div>
                 <p>{data.director}</p>
-                <div>
-                    {data.actors.map(el => {
-                        <p>{el}</p>
-                    })}
+                <div className='flex gap-2'>
+                    {data.actors.map(el => (
+                        <p className='px-[10px] py-[3px] rounded-2xl bg-gray-600 bg-opacity-90 text-xl'>{el}</p>
+                    ))}
                 </div>
-                <p>{data.resume}</p>
-                <div>
+                <p className='text-xl'>{data.resume}</p>
+                <div className='flex items-center justify-between'>
                     <div className="flex items-center">
                         {renderPopcornIcons(5)}
                     </div>
-                    <button>Watch Trailer</button>
+                    <button className='h-10 px-3 rounded-3xl bg-red-800 bg-opacity-70 text-xl'>Watch Trailer</button>
                 </div>
             </div>
-            <button onClick={closeModal}>Close Modal</button>
+            <button className="absolute top-4 right-4" onClick={closeModal}><FontAwesomeIcon icon={faXmark} className='text-3xl'/></button>
         </div>
     )
 }
