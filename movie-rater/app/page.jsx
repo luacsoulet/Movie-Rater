@@ -45,7 +45,7 @@ function Home() {
   };
   
   return (
-    <main className="flex flex-col justify-center items-center text-white gap-10" id='app'>
+    <main className="flex flex-col justify-center items-center text-white gap-10">
       <section className="flex flex-col mt-10 gap-5 w-full max-w-custom">
         <h1 className="text-center text-xl font-medium">Latest Movies Added:</h1>
         <div className="flex justify-center gap-10">
