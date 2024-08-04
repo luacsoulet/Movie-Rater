@@ -9,6 +9,7 @@ function Footer(){
             alt="image d'un siège"
             width={5120}
             height={105}
+            priority={true}
         />
     )
 }
