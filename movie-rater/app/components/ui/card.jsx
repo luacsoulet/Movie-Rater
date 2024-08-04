@@ -30,7 +30,6 @@ function Card({id ,title, year, averageRating, poster, onMovieSelect}){
                         className={currRating < 0 ? "grayscale" :""}
                         src={popcornImage}
                         alt="popcorn rate indicator"
-                        label="Image"
                         width={30}
                         height={30}
                     />
