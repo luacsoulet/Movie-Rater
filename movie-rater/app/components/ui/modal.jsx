@@ -1,3 +1,5 @@
+'use client'
+import { useState } from 'react';
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
@@ -5,14 +7,21 @@ import popcornImage from '@/public/images/popcorn-rating.svg'
 
 // Props data pour les donnés du film et setIsModalOpen pour savoir si la modal est ouverte depuis le composant
 function InfoModal({data, setIsModalOpen}){
-
-    // Valeur de averageRating stocker dans currRating pour faciliter le décompte lors de l'affichage de la note.
-    let currRating = data.averageRating;
+    
+    const [hoveredIndex, setHoveredIndex] = useState(null);
 
     // callback function pour la fermeture de la modale.
     const closeModal = () =>{
         setIsModalOpen(false);
     }
+
+    const handleMouseEnter = (index) => {
+        setHoveredIndex(index);
+    };
+
+    const handleMouseLeave = () => {
+        setHoveredIndex(null);
+    };
 
     // Fonction générant les icônes suivant la note du film sur 5
     const renderPopcornIcons = (number) => {
@@ -20,20 +29,25 @@ function InfoModal({data, setIsModalOpen}){
         const icons = [];
 
         for (let i = 0; i < number; i++) {
-            currRating -= 1;
+            
+            const isColored = hoveredIndex !== null && i <= hoveredIndex;
             // Push dans l'array icons de l'élément de note
             icons.push(
-                <div key={i} style={{ marginLeft: i === 0 ? '0' : '-5px' }}>
+                <button 
+                    key={i} 
+                    style={{ marginLeft: i === 0 ? '0' : '-5px' }}
+                    onMouseEnter={() => handleMouseEnter(i)}
+                    onMouseLeave={handleMouseLeave}
+                >
                     <Image
                         // si le currRating est inférieur à zéro alors le filtre greysclae de tailwind s'applique sur l'image.
-                        className={currRating < 0 ? "grayscale" :""}
+                        className={`${isColored ? '' : 'grayscale'}`}
                         src={popcornImage}
-                        alt="popcorn rate indicator"
-                        label="Image"
                         width={60}
                         height={60}
+                        alt="popcorn rate indicator"
                     />
-                </div>
+                </button>
             );
         }
         return icons;
@@ -54,14 +68,14 @@ function InfoModal({data, setIsModalOpen}){
                 <p>{data.duration} min</p>
                 <p>{data.year}</p>
                 <div className='flex gap-[8px]'>
-                    {data.genre.map(el => (
-                        <p className='px-[10px] py-[3px] rounded-2xl bg-red-800 bg-opacity-70 text-xl'>{el}</p>
+                    {data.genre.map((el, index) => (
+                        <p key={index} className='px-[10px] py-[3px] rounded-2xl bg-red-800 bg-opacity-70 text-xl'>{el}</p>
                     ))}
                 </div>
                 <p>{data.director}</p>
                 <div className='flex gap-2'>
-                    {data.actors.map(el => (
-                        <p className='px-[10px] py-[3px] rounded-2xl bg-gray-600 bg-opacity-90 text-xl'>{el}</p>
+                    {data.actors.map((el, index) => (
+                        <p key={index} className='px-[10px] py-[3px] rounded-2xl bg-gray-600 bg-opacity-90 text-xl'>{el}</p>
                     ))}
                 </div>
                 <p className='text-xl'>{data.resume}</p>
