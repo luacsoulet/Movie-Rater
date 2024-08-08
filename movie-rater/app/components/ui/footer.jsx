@@ -8,7 +8,7 @@ function Footer(){
             src="/images/ranger-sieges.svg"
             alt="image d'un siège"
             width={5120}
-            height={105}
+            height={80}
             priority={true}
         />
     )
