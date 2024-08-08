@@ -35,10 +35,10 @@ function Movies(){
     };
 
     return(
-        <main>
+        <main id='appq'>
             <div className='flex flex-col mb-[250px] w-full content-center items-center gap-10 text-white'>
                 <div className='text-center mt-10 text-xl font-medium'>MOVIES</div>
-                <div className='flex justify-center max-w-custom w-full flex-wrap gap-4'>
+                <div className='flex justify-center max-w-custom w-full flex-wrap gap-8 gap-y-8'>
                     {
                         data.map((el) => (
                             <Card
