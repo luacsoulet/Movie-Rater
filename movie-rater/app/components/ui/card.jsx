@@ -30,8 +30,8 @@ function Card({id ,title, year, averageRating, poster, onMovieSelect}){
                         className={currRating < 0 ? "grayscale" :""}
                         src={popcornImage}
                         alt="popcorn rate indicator"
-                        width={30}
-                        height={30}
+                        width={35}
+                        height={35}
                     />
                 </div>
             );
@@ -47,6 +47,7 @@ function Card({id ,title, year, averageRating, poster, onMovieSelect}){
                 alt={`${title}-image`}
                 label="Image"
                 fill
+                sizes="(max-width: 768px) 100vw"
                 style={{ objectFit: 'cover' }}
             />
             <div className="flex flex-col content-end p-2.5 gap-1">
@@ -59,7 +60,7 @@ function Card({id ,title, year, averageRating, poster, onMovieSelect}){
                             {renderPopcornIcons(5)}
                         </div>
                     </div>
-                    <button className="flex justify-center items-center w-8 h-8 text-xl rounded-3xl bg-[#131313] bg-opacity-50 backdrop-blur-sm" onClick={MovieSelectId}><FontAwesomeIcon icon={faPlus} /></button>
+                    <button className="flex justify-center items-center w-8 h-8 text-xl rounded-3xl bg-[#131313] bg-opacity-50 backdrop-blur-sm" onClick={MovieSelectId} aria-label="Afficher plus d'informations sur le film lors du clique"><FontAwesomeIcon icon={faPlus} /></button>
                 </div>
             </div>
         </div>
