@@ -8,40 +8,71 @@ import popcornImage from '@/public/images/popcorn-rating.svg'
 // Props data pour les donnés du film et setIsModalOpen pour savoir si la modal est ouverte depuis le composant
 function InfoModal({data, setIsModalOpen}){
     
+    const [indexRating, setIndexRating] = useState(null);
     const [hoveredIndex, setHoveredIndex] = useState(null);
 
     // callback function pour la fermeture de la modale.
-    const closeModal = () =>{
+    const closeModal = () => {
         setIsModalOpen(false);
+
+        // Remise à null de indexRating
+        setIndexRating(null)
     }
 
+    // callback function pour le hover d'un icône rating.
     const handleMouseEnter = (index) => {
         setHoveredIndex(index);
     };
 
+    // callback function pour la fin du hover d'un icône rating.
     const handleMouseLeave = () => {
         setHoveredIndex(null);
     };
 
+    // callback function pour le click d'un icône rating.
+    const handleRatingClick = (ratingValue) => {
+        setIndexRating(ratingValue)
+    }
+
     // Fonction générant les icônes suivant la note du film sur 5
     const renderPopcornIcons = (number) => {
+
         // initialisation d'un array qui prendra les icônes en stockage
         const icons = [];
 
+        //Initialisation de la valeur de currRating
+        let currRating = indexRating >= 0 ? indexRating : 0
+
         for (let i = 0; i < number; i++) {
             
+            // Mise à jour de la valeur de currRating
+            currRating -= 1;
+
+            // élément de comparaison sur hoveredIndex pour return une boolean sur ses deux conditions
             const isColored = hoveredIndex !== null && i <= hoveredIndex;
+
+            // élément de comparaison sur currRating est supérieur à zéro alors l'élément aura aucun filtre
+            const iconClass = currRating < 0 ? "grayscale" : "";
+
             // Push dans l'array icons de l'élément de note
             icons.push(
                 <button 
                     key={i} 
+
                     style={{ marginLeft: i === 0 ? '0' : '-5px' }}
+
+                    // Au click le numéro de l'icône + 1 sera enregistrer en tant que indexRating
+                    onClick={() => handleRatingClick(i + 1)}
+
+                    // Au survol le numéro de l'icône sera enregistrer en tant que hoveredIndex
                     onMouseEnter={() => handleMouseEnter(i)}
+
+                    // Quand le survole dépassera la souris alors la fonction callback handleMouseLeave
                     onMouseLeave={handleMouseLeave}
                 >
                     <Image
-                        // si le currRating est inférieur à zéro alors le filtre greysclae de tailwind s'applique sur l'image.
-                        className={`${isColored ? '' : 'grayscale'}`}
+                        // Si le useState indexrating est présent alors il prendra la comparaison iconClass pour la couleur des icônes si il fera référence a la fonction pour la coloration en fonction du hover des icônes.
+                        className={indexRating ? iconClass : (isColored ? '' : 'grayscale')}
                         src={popcornImage}
                         width={60}
                         height={60}
@@ -61,6 +92,7 @@ function InfoModal({data, setIsModalOpen}){
                     src={data.poster}
                     alt={data.title}
                     fill
+                    sizes="(max-width: 768px) 100vw"
                 />
             </div>
             <div className='flex flex-col gap-[8px] w-[720px] text-2xl'>
@@ -86,7 +118,7 @@ function InfoModal({data, setIsModalOpen}){
                     <button className='h-10 px-3 rounded-3xl bg-red-800 bg-opacity-70 text-xl'>Watch Trailer</button>
                 </div>
             </div>
-            <button className="absolute top-4 right-4" onClick={closeModal}><FontAwesomeIcon icon={faXmark} className='text-3xl'/></button>
+            <button className="absolute top-4 right-4" onClick={closeModal} aria-label="Fermer la fenêtre d'informations du film"><FontAwesomeIcon icon={faXmark} className='text-3xl'/></button>
         </div>
     )
 }
