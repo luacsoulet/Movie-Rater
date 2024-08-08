@@ -72,7 +72,7 @@ function InfoModal({data, setIsModalOpen}){
                 >
                     <Image
                         // Si le useState indexrating est présent alors il prendra la comparaison iconClass pour la couleur des icônes si il fera référence a la fonction pour la coloration en fonction du hover des icônes.
-                        className={indexRating ? iconClass : (isColored ? '' : 'grayscale')}
+                        className={`${indexRating ? iconClass : (isColored ? '' : 'grayscale')} transition ease-in-out duration-300`}
                         src={popcornImage}
                         width={60}
                         height={60}
@@ -101,13 +101,13 @@ function InfoModal({data, setIsModalOpen}){
                 <p>{data.year}</p>
                 <div className='flex gap-[8px]'>
                     {data.genre.map((el, index) => (
-                        <p key={index} className='px-[10px] py-[3px] rounded-2xl bg-red-800 bg-opacity-70 text-xl'>{el}</p>
+                        <p key={index} className='px-[10px] py-[3px] rounded-2xl bg-red-800 text-xl hover:bg-opacity-70 transition ease-in-out duration-300'>{el}</p>
                     ))}
                 </div>
                 <p>{data.director}</p>
                 <div className='flex gap-2'>
                     {data.actors.map((el, index) => (
-                        <p key={index} className='px-[10px] py-[3px] rounded-2xl bg-gray-600 bg-opacity-90 text-xl'>{el}</p>
+                        <p key={index} className='px-[10px] py-[3px] rounded-2xl bg-gray-500 text-xl hover:bg-gray-600 transition ease-in-out duration-300'>{el}</p>
                     ))}
                 </div>
                 <p className='text-xl'>{data.resume}</p>
@@ -115,7 +115,7 @@ function InfoModal({data, setIsModalOpen}){
                     <div className="flex items-center">
                         {renderPopcornIcons(5)}
                     </div>
-                    <button className='h-10 px-3 rounded-3xl bg-red-800 bg-opacity-70 text-xl'>Watch Trailer</button>
+                    <button className='h-10 px-3 rounded-3xl bg-red-800 text-xl hover:bg-opacity-70 transition ease-in-out duration-300'>Watch Trailer</button>
                 </div>
             </div>
             <button className="absolute top-4 right-4" onClick={closeModal} aria-label="Fermer la fenêtre d'informations du film"><FontAwesomeIcon icon={faXmark} className='text-3xl'/></button>
