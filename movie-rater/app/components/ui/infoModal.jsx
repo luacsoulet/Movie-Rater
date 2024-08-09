@@ -112,7 +112,7 @@ function InfoModal({data, setIsModalOpen}){
                             <div className="flex items-center">
                                 {renderPopcornIcons(5)}
                             </div>
-                            <button className='h-10 px-3 rounded-3xl bg-red-800 text-xl hover:bg-opacity-70 transition ease-in-out duration-300' onClick={handleTrailerModalOpen}>Watch Trailer</button>
+                            <button className='h-10 px-3 rounded-3xl bg-red-800 text-xl hover:bg-opacity-70 transition ease-in-out duration-300'>Watch Trailer</button>
                         </div>
                     </div>
                     <button className="absolute top-4 right-4" onClick={closeModal} aria-label="Fermer la fenêtre d'informations du film"><FontAwesomeIcon icon={faXmark} className='text-3xl'/></button>
