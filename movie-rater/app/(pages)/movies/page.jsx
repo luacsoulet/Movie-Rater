@@ -1,7 +1,7 @@
 'use client'
 import Modal from 'react-modal';
 import { useState } from "react";
-import InfoModal from "@/app/components/ui/modal";
+import InfoModal from "@/app/components/ui/infoModal";
 import Card from "@/app/components/ui/card";
 import MoviesData from '@/public/data.json'
 
