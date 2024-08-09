@@ -83,39 +83,39 @@ function InfoModal({data, setIsModalOpen}){
 
     return (
         <div className='flex items-center gap-8 min-h-[600px] h-fit'>
-                    <div className='relative w-[333px] h-[500px]'>
-                        <Image
-                            className='rounded-xl object-cover'
-                            src={data.poster}
-                            alt={data.title}
-                            fill
-                            sizes="(max-width: 768px) 100vw"
-                        />
+            <div className='relative w-[333px] h-[500px]'>
+                <Image
+                    className='rounded-xl object-cover'
+                    src={data.poster}
+                    alt={data.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw"
+                />
+            </div>
+            <div className='flex flex-col gap-[8px] w-[720px] text-2xl'>
+                <h1 className='text-3xl'>{data.title}</h1>
+                <p>{data.duration} min</p>
+                <p>{data.year}</p>
+                <div className='flex gap-[8px]'>
+                    {data.genre.map((el, index) => (
+                        <p key={index} className='px-[10px] py-[3px] rounded-2xl bg-red-800 text-xl hover:bg-opacity-70 transition ease-in-out duration-300'>{el}</p>
+                    ))}
+                </div>
+                <p>{data.director}</p>
+                <div className='flex gap-2'>
+                    {data.actors.map((el, index) => (
+                        <p key={index} className='px-[10px] py-[3px] rounded-2xl bg-gray-500 text-xl hover:bg-gray-600 transition ease-in-out duration-300'>{el}</p>
+                    ))}
+                </div>
+                <p className='text-xl'>{data.resume}</p>
+                <div className='flex items-center justify-between'>
+                    <div className="flex items-center">
+                        {renderPopcornIcons(5)}
                     </div>
-                    <div className='flex flex-col gap-[8px] w-[720px] text-2xl'>
-                        <h1 className='text-3xl'>{data.title}</h1>
-                        <p>{data.duration} min</p>
-                        <p>{data.year}</p>
-                        <div className='flex gap-[8px]'>
-                            {data.genre.map((el, index) => (
-                                <p key={index} className='px-[10px] py-[3px] rounded-2xl bg-red-800 text-xl hover:bg-opacity-70 transition ease-in-out duration-300'>{el}</p>
-                            ))}
-                        </div>
-                        <p>{data.director}</p>
-                        <div className='flex gap-2'>
-                            {data.actors.map((el, index) => (
-                                <p key={index} className='px-[10px] py-[3px] rounded-2xl bg-gray-500 text-xl hover:bg-gray-600 transition ease-in-out duration-300'>{el}</p>
-                            ))}
-                        </div>
-                        <p className='text-xl'>{data.resume}</p>
-                        <div className='flex items-center justify-between'>
-                            <div className="flex items-center">
-                                {renderPopcornIcons(5)}
-                            </div>
-                            <button className='h-10 px-3 rounded-3xl bg-red-800 text-xl hover:bg-opacity-70 transition ease-in-out duration-300'>Watch Trailer</button>
-                        </div>
-                    </div>
-                    <button className="absolute top-4 right-4" onClick={closeModal} aria-label="Fermer la fenêtre d'informations du film"><FontAwesomeIcon icon={faXmark} className='text-3xl'/></button>
+                    <button className='h-10 px-3 rounded-3xl bg-red-800 text-xl hover:bg-opacity-70 transition ease-in-out duration-300'>Watch Trailer</button>
+                </div>
+            </div>
+            <button className="absolute top-4 right-4" onClick={closeModal} aria-label="Fermer la fenêtre d'informations du film"><FontAwesomeIcon icon={faXmark} className='text-3xl'/></button>
         </div>
     )
 }
