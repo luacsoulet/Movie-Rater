@@ -229,6 +229,167 @@
       "averageRating": 5,
       "trailerUrl": "https://youtu.be/oVxcQQXXxGQ?si=d07n0eU7y7YH66Tk",
       "resume": "It's a space opera that introduces the battle between the Rebel Alliance and the Galactic Empire. The film follows Luke Skywalker, a young farm boy who discovers his destiny as a Jedi Knight. With the help of allies like Princess Leia, Han Solo, and Obi-Wan Kenobi, Luke joins the fight against the evil Darth Vader and the Empire. The story explores themes of heroism, destiny, and the struggle between good and evil."
+    },
+    {
+      "id": 11,
+      "title": "Toy Story",
+      "year": 1995,
+      "director": "John Lasseter",
+      "actors": ["Tom Hanks", "Tim Allen", "Don Rickles", "Jim Varney"],
+      "genre": ["Animation", "Adventure", "Comedy"],
+      "duration": 81,
+      "poster": "/images/toy-story.webp",
+      "ratings": [
+        {"rating": 4},
+        {"rating": 5},
+        {"rating": 4},
+        {"rating": 3},
+        {"rating": 5},
+        {"rating": 3},
+        {"rating": 4},
+        {"rating": 5}
+      ],
+      "averageRating": 4,
+      "trailerUrl": "https://youtu.be/KYz2wyBy3kc",
+      "resume": "Toy Story is a groundbreaking animated film that introduces a world where toys come to life when humans aren't watching. The story follows Woody, a cowboy doll, who faces competition from a new toy, Buzz Lightyear, who thinks he's a real space ranger. The film explores themes of friendship, loyalty, and the challenges of change."
+    },
+    {
+      "id": 12,
+      "title": "Harry Potter and the Philosopher's Stone",
+      "year": 2001,
+      "director": "Chris Columbus",
+      "actors": ["Daniel Radcliffe", "Rupert Grint", "Emma Watson", "Richard Harris"],
+      "genre": ["Fantasy", "Adventure", "Family"],
+      "duration": 152,
+      "poster": "/images/harry-potter.jpg",
+      "ratings": [
+        {"rating": 5},
+        {"rating": 4},
+        {"rating": 5},
+        {"rating": 3},
+        {"rating": 4},
+        {"rating": 5},
+        {"rating": 4},
+        {"rating": 5}
+      ],
+      "averageRating": 5,
+      "trailerUrl": "https://youtu.be/VyHV0BRtdxo",
+      "resume": "The first installment of the Harry Potter series, this film follows the young wizard Harry Potter as he discovers his magical heritage and begins his education at Hogwarts School of Witchcraft and Wizardry. Along with his friends Hermione and Ron, Harry uncovers the mystery of the Philosopher's Stone and faces the dark wizard Voldemort."
+    },
+    {
+      "id": 13,
+      "title": "Garfield",
+      "year": 2004,
+      "director": "Peter Hewitt",
+      "actors": ["Bill Murray", "Breckin Meyer", "Jennifer Love Hewitt", "Stephen Tobolowsky"],
+      "genre": ["Comedy", "Family"],
+      "duration": 80,
+      "poster": "/images/garfield.jpg",
+      "ratings": [
+        {"rating": 3},
+        {"rating": 3},
+        {"rating": 4},
+        {"rating": 4},
+        {"rating": 3},
+        {"rating": 3},
+        {"rating": 3},
+        {"rating": 4}
+      ],
+      "averageRating": 3,
+      "trailerUrl": "https://youtu.be/8afYHYl0ZcQ",
+      "resume": "Garfield is a live-action/animated comedy that follows the adventures of the lazy and lasagna-loving cat, Garfield. When his owner, Jon, adopts a new dog named Odie, Garfield's life is turned upside down. The film explores the rivalry between the two pets and ultimately the bond that forms between them."
+    },
+    {
+      "id": 14,
+      "title": "The Wolf of Wall Street",
+      "year": 2013,
+      "director": "Martin Scorsese",
+      "actors": ["Leonardo DiCaprio", "Jonah Hill", "Margot Robbie", "Matthew McConaughey"],
+      "genre": ["Biography", "Crime", "Drama"],
+      "duration": 180,
+      "poster": "/images/the-wolf-of-wall-street.jpeg",
+      "ratings": [
+        {"rating": 5},
+        {"rating": 4},
+        {"rating": 4},
+        {"rating": 5},
+        {"rating": 3},
+        {"rating": 5},
+        {"rating": 4},
+        {"rating": 5}
+      ],
+      "averageRating": 5,
+      "trailerUrl": "https://youtu.be/iszwuX1AK6A",
+      "resume": "The Wolf of Wall Street is a biographical black comedy that chronicles the rise and fall of Jordan Belfort, a stockbroker who engages in rampant corruption and fraud on Wall Street. The film explores themes of greed, excess, and the consequences of a lifestyle built on unethical practices."
+    },
+    {
+      "id": 15,
+      "title": "Longlegs",
+      "year": 2024,
+      "director": "Osgood Perkins",
+      "actors": ["Nicolas Cage", "Maika Monroe", "Blair Underwood"],
+      "genre": ["Horror", "Thriller"],
+      "duration": 105,
+      "poster": "/images/longlegs.jpg",
+      "ratings": [
+        {"rating": 4},
+        {"rating": 3},
+        {"rating": 4},
+        {"rating": 4},
+        {"rating": 3},
+        {"rating": 5},
+        {"rating": 4},
+        {"rating": 5}
+      ],
+      "averageRating": 4,
+      "trailerUrl": "https://youtu.be/somefakeurl",
+      "resume": "Longlegs is a chilling horror thriller that follows a detective as he delves into a series of mysterious and gruesome murders. As he uncovers the dark secrets behind the killings, he realizes that a supernatural force may be at play. The film explores themes of fear, the unknown, and the thin line between reality and madness."
+    },
+    {
+      "id": 16,
+      "title": "Polar",
+      "year": 2019,
+      "director": "Jonas Åkerlund",
+      "actors": ["Mads Mikkelsen", "Vanessa Hudgens", "Katheryn Winnick", "Matt Lucas"],
+      "genre": ["Action", "Crime", "Drama"],
+      "duration": 118,
+      "poster": "/images/polar.jpg",
+      "ratings": [
+        {"rating": 3},
+        {"rating": 4},
+        {"rating": 4},
+        {"rating": 4},
+        {"rating": 5},
+        {"rating": 5},
+        {"rating": 3},
+        {"rating": 4}
+      ],
+      "averageRating": 4,
+      "trailerUrl": "https://youtu.be/oMHwRal-AR8",
+      "resume": "Polar is a stylish and violent action film that follows a retired assassin, Duncan Vizla, who is forced back into the deadly world he left behind. As he fights for survival against younger assassins, the film explores themes of revenge, redemption, and the high price of a violent past."
+    },
+    {
+      "id": 17,
+      "title": "Interstellar",
+      "year": 2014,
+      "director": "Christopher Nolan",
+      "actors": ["Matthew McConaughey", "Anne Hathaway", "Jessica Chastain", "Michael Caine"],
+      "genre": ["Science Fiction", "Adventure", "Drama"],
+      "duration": 169,
+      "poster": "/images/interstellar.png",
+      "ratings": [
+        {"rating": 5},
+        {"rating": 5},
+        {"rating": 4},
+        {"rating": 5},
+        {"rating": 4},
+        {"rating": 5},
+        {"rating": 3},
+        {"rating": 5}
+      ],
+      "averageRating": 5,
+      "trailerUrl": "https://youtu.be/zSWdZVtXT7E",
+      "resume": "Interstellar is a visually stunning sci-fi epic that follows a group of astronauts who embark on a dangerous mission to find a new home for humanity. As Earth faces ecological collapse, they travel through a wormhole in search of a habitable planet, exploring themes of love, sacrifice, and the limits of human endurance."
     }
   ]
 }
