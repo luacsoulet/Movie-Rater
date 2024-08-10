@@ -65,7 +65,7 @@ function Home() {
       </section>
       <section className="flex flex-col gap-5 w-full max-w-custom mb-[250px]">
         <h1 className="text-center text-xl font-medium">Best ratings:</h1>
-        <div className="flex gap-10 justify-center">
+        <div className="flex gap-8 justify-center">
         {/* Génération des Card pour les films les mieux notés */}
         {bestRating.map((el) => (
             <Card 
