@@ -261,7 +261,7 @@
       "actors": ["Daniel Radcliffe", "Rupert Grint", "Emma Watson", "Richard Harris"],
       "genre": ["Fantasy", "Adventure", "Family"],
       "duration": 152,
-      "poster": "/images/harry-potter.jpg",
+      "poster": "/images/harry-potter.webp",
       "ratings": [
         {"rating": 5},
         {"rating": 4},
@@ -284,7 +284,7 @@
       "actors": ["Bill Murray", "Breckin Meyer", "Jennifer Love Hewitt", "Stephen Tobolowsky"],
       "genre": ["Comedy", "Family"],
       "duration": 80,
-      "poster": "/images/garfield.jpg",
+      "poster": "/images/garfield.webp",
       "ratings": [
         {"rating": 3},
         {"rating": 3},
@@ -307,7 +307,7 @@
       "actors": ["Leonardo DiCaprio", "Jonah Hill", "Margot Robbie", "Matthew McConaughey"],
       "genre": ["Biography", "Crime", "Drama"],
       "duration": 180,
-      "poster": "/images/the-wolf-of-wall-street.jpeg",
+      "poster": "/images/the-wolf-of-wall-street.webp",
       "ratings": [
         {"rating": 5},
         {"rating": 4},
@@ -330,7 +330,7 @@
       "actors": ["Nicolas Cage", "Maika Monroe", "Blair Underwood"],
       "genre": ["Horror", "Thriller"],
       "duration": 105,
-      "poster": "/images/longlegs.jpg",
+      "poster": "/images/longlegs.webp",
       "ratings": [
         {"rating": 4},
         {"rating": 3},
@@ -353,7 +353,7 @@
       "actors": ["Mads Mikkelsen", "Vanessa Hudgens", "Katheryn Winnick", "Matt Lucas"],
       "genre": ["Action", "Crime", "Drama"],
       "duration": 118,
-      "poster": "/images/polar.jpg",
+      "poster": "/images/polar.webp",
       "ratings": [
         {"rating": 3},
         {"rating": 4},
@@ -376,7 +376,7 @@
       "actors": ["Matthew McConaughey", "Anne Hathaway", "Jessica Chastain", "Michael Caine"],
       "genre": ["Science Fiction", "Adventure", "Drama"],
       "duration": 169,
-      "poster": "/images/interstellar.png",
+      "poster": "/images/interstellar.webp",
       "ratings": [
         {"rating": 5},
         {"rating": 5},
