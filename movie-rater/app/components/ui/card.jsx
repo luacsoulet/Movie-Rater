@@ -1,42 +1,13 @@
 import Image from "next/image"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faBookmark } from "@fortawesome/free-solid-svg-icons";
-import popcornImage from '@/public/images/popcorn-rating.svg'
+import renderPopcornIcons from "./utils";
 
 function Card({id ,title, year, averageRating, poster, onMovieSelect}){
-
-    // Valeur de averageRating stocker dans currRating pour faciliter le décompte lors de l'affichage de la note.
-    let currRating = averageRating;
     
     // Callback function qui envoie en tant que props au composant parent pour avoir l'id du film sélectionner.
     const MovieSelectId =() => {
         onMovieSelect(id)
-    }
-
-    // Fonction générant les icônes suivant la note du film sur 5
-    const renderPopcornIcons = (number) => {
-        
-        // initialisation d'un array qui prendra les icônes en stockage
-        const icons = [];
-
-        for (let i = 0; i < number; i++) {
-
-            currRating -= 1;
-            // Push dans l'array icons de l'élément de note
-            icons.push(
-                <div key={i} style={{ marginLeft: i === 0 ? '0' : '-5px' }}>
-                    <Image
-                        // si le currRating est inférieur à zéro alors le filtre greysclae de tailwind s'applique sur l'image.
-                        className={currRating < 0 ? "grayscale" :""}
-                        src={popcornImage}
-                        alt="popcorn rate indicator"
-                        width={35}
-                        height={35}
-                    />
-                </div>
-            );
-        }
-        return icons;
     }
 
     return(
@@ -57,7 +28,7 @@ function Card({id ,title, year, averageRating, poster, onMovieSelect}){
                 <div className="flex justify-between items-center">
                     <div className="w-fit h-fit py-1 rounded-lg bg-[#131313] bg-opacity-50 backdrop-blur-sm">
                         <div className="flex items-center">
-                            {renderPopcornIcons(5)}
+                            {renderPopcornIcons(5, averageRating)}
                         </div>
                     </div>
                     <button className="flex justify-center items-center w-8 h-8 text-xl rounded-3xl bg-[#131313] bg-opacity-50 backdrop-blur-sm hover:scale-125 transition ease-in-out duration-200" onClick={MovieSelectId} aria-label="Afficher plus d'informations sur le film lors du clique"><FontAwesomeIcon icon={faPlus} /></button>
