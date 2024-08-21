@@ -1,8 +1,8 @@
 'use client'
 import Modal from 'react-modal';
 import { useState } from "react";
-import InfoModal from "./components/ui/infoModal";
-import Card from "./components/ui/card";
+import InfoModal from "@/app/components/ui/infoModal";
+import Card from "@/app/components/ui/card";
 import MoviesData from '@/public/data.json'
 
 // Définir a quel élément parent la modal sera rattacher
