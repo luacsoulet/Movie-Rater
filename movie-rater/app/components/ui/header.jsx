@@ -8,9 +8,9 @@ function Header(){
     
     const navItems = [
         { name: 'Home', path: '/' },
-        { name: 'Movies', path: '/movies' },
-        { name: 'Add Movies', path: '/addMovies' },
-        { name: 'Account', path: '/account' },
+        { name: 'Movies', path: '/pages/movies' },
+        { name: 'Add Movies', path: '/pages/addMovies' },
+        { name: 'Account', path: '/pages/account' },
     ];
 
     const handleLinkClick = (path) => {
