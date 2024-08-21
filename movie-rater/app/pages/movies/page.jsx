@@ -1,4 +1,5 @@
 'use client'
+
 import Modal from 'react-modal';
 import { useState } from "react";
 import InfoModal from "@/app/components/ui/infoModal";
@@ -14,12 +15,12 @@ function Movies(){
     const [isMovieData, setIsMovieData] = useState([]);
     
     // Sélection des données des films dans le fichier .json de test
-    const data = MoviesData.films;
+    const movies = MoviesData.films;
 
     const handleMovieSelect = (id) => {
 
         // Cherche les données suivant l'affiche où l'on a cliqué pour avoir plus d'infos.
-        const movieData = data.find(el => el.id === id);
+        const movieData = movies.find(el => el.id === id);
     
         // Mettre les données du film dans le useState 
         setIsMovieData(movieData);
@@ -40,7 +41,7 @@ function Movies(){
                 <div className='text-center mt-10 text-xl font-medium'>MOVIES</div>
                 <div className='flex justify-center max-w-custom w-full flex-wrap gap-8 gap-y-8'>
                     {
-                        data.map((el) => (
+                        movies.map((el) => (
                             <Card
                                 key={el.id}
                                 id={el.id}
