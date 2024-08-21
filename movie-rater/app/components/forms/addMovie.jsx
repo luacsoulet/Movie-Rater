@@ -1,19 +1,22 @@
 'use client';
 import { useState } from "react";
 import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faImage } from "@fortawesome/free-solid-svg-icons";
 import popcornImage from '@/public/images/popcorn-rating.svg'
 
 function AddMovie (){
     const [addingForm, setAddingForm] = useState({
-        file: [],
+        poster: '',
         title: '',
         duration: '',
         year: '',
         genre: [],
         director: [],
         actors: [],
-        trailer: '',
+        trailerUrl: '',
         averageRating: '',
+        resume: '',
     });
 
     const [numberActorInputs, setNumberActorInputs] = useState(1);
@@ -140,13 +143,35 @@ function AddMovie (){
         <div className="w-full max-w-[1240px] min-h-[600px] h-fit rounded-lg border-2 border-[#444141] bg-[#131313] backdrop-blur-sm">
             <form className='flex flex-col' onSubmit={handleSubmitMovieForm}>
                 <div className="flex text-black">
-                    <input 
+                    {addingForm.poster ? (
+                    <label htmlFor="imageMovie">
+                        <div className="relative w-[333px] h-[500px]">
+                                <Image
+                                    className='rounded-xl object-cover'
+                                    src={URL.createObjectURL(addingForm.poster)}
+                                    alt="Input image"
+                                    fill
+                                    sizes="(max-width: 768px) 100vw"
+                                />
+                        </div>
+                    </label>
+                    ) : (
+                        <label className='flex w-[333px] h-[500px] justify-center items-center rounded-lg bg-slate-50' htmlFor="imageMovie">
+                            <div className="flex flex-col">
+                                <FontAwesomeIcon className='text-9xl' icon={faImage} />
+                                <p className="text-center">Add an image</p>
+                            </div>
+                    </label>
+                    )}
+                    <input
+                        className="hidden"
+                        id="imageMovie"
                         type="file" 
                         name="imageMovie" 
                         onChange={(e) => 
                         setAddingForm({
                             ...addingForm,
-                            file: e.target.files[0],
+                            poster: e.target.files[0],
                         })
                     }/>
                     <div className="flex flex-col min-w-[600px] gap-2.5">
@@ -186,15 +211,19 @@ function AddMovie (){
                                 More Actor
                             </button>
                         </div>
+                        <textarea className="resize-none box-content w-[500px] py-2 min-h-[90px] max-h-fit" name="resume" onChange={(e) => setAddingForm({
+                            ...addingForm,
+                            resume: e.target.value
+                        })}/>
                         <div>
                             <div className="flex items-center">
                                 {renderPopcornIcons(5)}
                             </div>
-                            {generateFormInput("trailer", "Add Trailer", "text")}
+                            {generateFormInput("trailerUrl", "Add Trailer", "text")}
                         </div>
                     </div>
                 </div>
-                <button type="submit">Submit</button>
+                <button className="h-10 px-3 rounded-3xl bg-red-800 text-xl hover:bg-opacity-70 transition ease-in-out duration-300" type="submit">Submit</button>
             </form>
         </div>
     )
